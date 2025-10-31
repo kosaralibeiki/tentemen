@@ -1,26 +1,36 @@
-def grade(point):
-    if 90 <= point <= 100:
-        return "A"
+class  TreasureKey:
+    pass
 
-    elif 80 <= point <= 89:
-        return "B"
+class Pirate:
+    def __init__(self, name, key):
+        self.name = name
+        self.key = key
 
-    elif 70 <= point <= 79:
-        return "C"
 
-    elif 60 <= point <= 69:
-        return "D"
+class Treasure:
+    def __init__(self, _secret_treasure, _secret_treasure_key):
+        self.secret_treasure = _secret_treasure
+        self.treasure_key = _secret_treasure_key
 
-    elif 60 <= point <= 0:
-        return "F"
+    def open_treasure_box(self, pirate):
+        if pirate.key != self.secret_treasure:
+            print("Klick klick klick")
 
-    else:
-        return f"Ogiltigt poängantal!"
 
-# print(grade(100))
-# print(grade(80))
-# print(grade(81))
-# print(grade(79))
-# print(grade(70))
-print(grade(-2))
-print(grade(120))
+
+treasure_key_1 = TreasureKey()
+treasure_key_2 = TreasureKey()
+treasure_key_3 = TreasureKey()
+treasure_key_4 = TreasureKey()
+
+treasure = Treasure("Gold", treasure_key_3)
+
+pirate_1 = Pirate("Jack Sparrow", treasure_key_3)
+pirate_2 = Pirate("Max Boulevard", treasure_key_4)
+pirate_3 = Pirate("Mickael Jackson", treasure_key_2)
+pirate_4 = Pirate("Allan Dolmen", treasure_key_1)
+
+
+pirates = [pirate_1, pirate_2, pirate_3, pirate_4]
+for pirate in pirates:
+    treasure.open_treasure_box(pirate)
