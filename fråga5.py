@@ -1,3 +1,6 @@
+# Second best is not first place!
+
+
 def second_smallest_and_largest(num_list):
     unique_list = []
     for num in num_list:

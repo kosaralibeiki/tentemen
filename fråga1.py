@@ -1,3 +1,5 @@
+# Artist and albums (Artister och album)
+
 artist_and_albums = {
 
   "Stevie Wonder": ["Talking book", "Hotter then July"],
@@ -18,7 +20,7 @@ while True:
 
     print("3. Avsluta")
 
-    choice = input(">>>")
+    choice = input(">>> ")
 
     if choice == "1":
         ny_artist = input("Artist: ").title().strip()
@@ -46,6 +48,9 @@ while True:
     elif choice == "3":
         break
 
+    # elif choice == "4":
+    #     for key, value in artist_and_albums.items():
+    #         print(key, value)
     else:
 
         print("Ogiltigt val")

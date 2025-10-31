@@ -1,3 +1,5 @@
+# Udda och jämna!
+
 
 numbers =[]
 while True:
@@ -21,10 +23,15 @@ while True:
 if not numbers:
     print("No numbers entered")
 
-sorted_numbers = numbers.sort()
+unique_numbers = []
+for num in numbers:
+    if num not in unique_numbers:
+        unique_numbers.append(num)
 
-print(numbers)
-for number in numbers:
+unique_numbers.sort()
+
+# print(numbers)
+for number in unique_numbers:
     counts = numbers.count(number)
     if number % 2 == 0:
         with open("jämna.txt", "a", encoding="UTF-8") as file:
